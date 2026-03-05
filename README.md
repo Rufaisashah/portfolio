@@ -2,6 +2,7 @@
 Welcome to the repository for my professional portfolio. This project is a custom-built, responsive showcase of my skills as a Frontend-focused Web Developer based in Odense, Denmark.
 
 🚀 The Vision
+-------
 I built this portfolio to demonstrate my ability to create clean, user-centric interfaces. It serves as a central hub for my technical journey, moving from an IT educator background into full-stack web development.
 
 Key Technical Features:
