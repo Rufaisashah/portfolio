@@ -17,12 +17,14 @@ Modern CSS Architecture: Utilizes the Montserrat typography system and a clean, 
 Interactive Components: Features a custom-coded hamburger menu for mobile navigation and smooth internal linking.
 
 🛠️ Tech Stack & Tools
+-----------
 📂 Featured Projects
 ---------
 The projects showcased in this portfolio highlight my growth in logic and design:
 A responsive memory game featuring dynamic card randomization and three difficulty levels. (Tech: JavaScript, CSS, HTML).
 
 Waveriders Portal: A foundational landing page project focusing on layout precision.
+------
 
 📈 About the Developer
 
