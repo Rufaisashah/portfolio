@@ -28,9 +28,9 @@ Waveriders Portal: A foundational landing page project focusing on layout precis
 📈 About the Developer
 -------
 
-Currently a trainee at HackYourFuture Denmark, I am dedicated to building websites that contribute to the success of the overall product.
+Currently a trainee at HackYourFuture Denmark, I focus on building websites that help drive the success of the overall product.
+When I’m not debugging 💻I’m probably clearing my head on a long walk 🛤️🚶‍♀️or baking a cake 🎂  (it’s the best way I know to hit the "refresh" button on my brain)😊
 
-When I’m not debugging, I’m probably clearing my head on a long walk or baking a cake—it’s the best way I know to hit the 'refresh' button on my brain."
 
 🤝 Let's Connect
 ------------
