@@ -18,20 +18,21 @@ Interactive Components: Features a custom-coded hamburger menu for mobile naviga
 
 🛠️ Tech Stack & Tools
 📂 Featured Projects
+---------
 The projects showcased in this portfolio highlight my growth in logic and design:
-
-: A responsive memory game featuring dynamic card randomization and three difficulty levels. (Tech: JavaScript, CSS, HTML).
+A responsive memory game featuring dynamic card randomization and three difficulty levels. (Tech: JavaScript, CSS, HTML).
 
 Waveriders Portal: A foundational landing page project focusing on layout precision.
 
-Full-Stack Labs: Ongoing coursework focusing on the integration of frontend and backend technologies.
-
 📈 About the Developer
+
+---------
 Currently a trainee at HackYourFuture Denmark, I am dedicated to building websites that contribute to the success of the overall product.
 
-"When I’m not debugging, I’m probably clearing my head on a long walk or baking a cake—it’s the best way I know to hit the 'refresh' button on my brain."
+When I’m not debugging, I’m probably clearing my head on a long walk or baking a cake—it’s the best way I know to hit the 'refresh' button on my brain."
 
 🤝 Let's Connect
+------------
 I am always open to collaborating on innovative projects or discussing junior developer opportunities.
 
 
