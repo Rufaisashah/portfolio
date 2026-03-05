@@ -1,5 +1,5 @@
 
-Welcome to the repository for my professional portfolio. This project is a custom-built, responsive showcase of my skills as a Frontend-focused Web Developer based in Odense, Denmark.
+Welcome to the repository of professional portfolio. This project is a custom-built, responsive showcase of my skills as a Frontend-focused Web Developer based in Odense, Denmark.
 
 🚀 The Vision
 -------
