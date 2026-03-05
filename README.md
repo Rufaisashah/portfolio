@@ -6,6 +6,8 @@ Welcome to the repository for my professional portfolio. This project is a custo
 I built this portfolio to demonstrate my ability to create clean, user-centric interfaces. It serves as a central hub for my technical journey, moving from an IT educator background into full-stack web development.
 
 Key Technical Features:
+
+---------
 Mobile-First Responsive Design: Built using custom CSS without external UI frameworks to ensure a lightweight and fast user experience.
 
 Semantic HTML5: Structured for high accessibility (A11y) and SEO performance.
