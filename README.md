@@ -16,7 +16,7 @@ Modern CSS Architecture: Utilizes the Montserrat typography system and a clean, 
 
 Interactive Components: Features a custom-coded hamburger menu for mobile navigation and smooth internal linking.
 
-🛠️ Tech Stack & Tools
+
 -----------
 📂 Featured Projects
 ---------
