@@ -6,41 +6,23 @@
   --white: #ffffff;
   --primary-hover: #e6b800;
   --transition-fast: 0.3s;
-
-  --glass-white: rgba(255, 255, 255, 0.532);
-
-  --glass-grey: rgba(245, 245, 245, 0.184);
-
   --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.245);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: "Montserrat", sans-serif; background-color: var(--bg-body); color: var(--text-main); }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-
-  background-color: var(--bg-body);
-  color: var(--text-main);
-}
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed; /* 1. Make it stay at the top */
-  top: 0;
-  left: 0; /* 2. Pin it to the very top */
-  width: 100%; /* 3. Make it stretch across the screen */
-  z-index: 1000; /* 4. Keep it ABOVE the hero and projects */
-  padding: 15px 50px; /* 5. Keep padding consistent */
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 15px 50px;
   background: var(--white);
   box-shadow: var(--shadow-soft);
 }
@@ -54,8 +36,7 @@ body {
 }
 
 .profile-img {
-  width: 45px;
-  height: 45px;
+  width: 45px; height: 45px;
   border-radius: 50%;
   background-image: url(./images/Profile.jpeg);
   background-size: cover;
@@ -64,10 +45,7 @@ body {
   background-color: var(--primary);
 }
 
-.logo-text {
-  font-weight: 800;
-  letter-spacing: 1px;
-}
+.logo-text { font-weight: 800; letter-spacing: 1px; }
 
 .nav-links a {
   text-decoration: none;
@@ -75,10 +53,15 @@ body {
   font-weight: 700;
   margin-left: 40px;
   font-size: 0.9rem;
+  transition: color 0.2s;
 }
+
+.nav-links a:hover { color: var(--primary-hover); }
+
+
 .hero-section {
   margin-top: 80px;
-  height: 90vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,87 +86,63 @@ body {
   margin-bottom: 40px;
 }
 
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
 .cta-button {
   text-decoration: none;
   background-color: var(--primary);
   color: var(--text-main);
-  padding: 18px 50px;
+  padding: 14px 36px;
   font-weight: 800;
   border-radius: 5px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   transition: 0.2s;
-}
-
-.project-card .cta-button {
-  padding: 10px 25px;
-  font-size: 0.9rem;
   display: inline-block;
-  margin: 5px 0;
-  width: auto;
+  font-size: 0.9rem;
 }
 
-.project-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center; /* center buttons */
-}
 .cta-button:hover {
   transform: translateY(-3px);
   background: var(--primary-hover);
 }
 
-.projects-section {
-  padding: 100px 20px;
-  background: var(--white);
-  text-align: center;
+.cta-outline {
+  background: transparent;
+  border: 2px solid var(--text-main);
+  color: var(--text-main);
 }
 
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 800;
+.cta-outline:hover {
+  background: var(--text-main);
+  color: var(--white);
 }
+
+
+.section-title { font-size: 2.5rem; font-weight: 800; }
+
 .yellow-line {
-  width: 35px;
-  height: 5px;
+  width: 35px; height: 5px;
   background: var(--primary);
   margin: 20px auto;
   border-radius: 10px;
 }
 
-/* --- CHANGE THIS SECTION --- */
-.project-card {
-  width: 90%; /* ADD THIS: Makes it look better on phones */
-  max-width: 800px; /* KEEP THIS: Prevents it from getting too wide on desktop */
-  margin: 40px auto; /* Reduced margin for better flow */
-  padding: 40px;
-  background: var(--white);
-  box-shadow: var(--shadow-soft);
-  border-radius: 8px; /* Optional: adds a slight professional curve */
-}
+
 .about-section {
-  padding: 100px 20px; /* spacing top/bottom */
-  background: var(--bg-body); /* same background as hero */
+  padding: 100px 20px;
+  background: var(--bg-body);
   text-align: center;
-}
-
-.about-section .section-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-}
-
-.about-section .yellow-line {
-  width: 35px;
-  height: 5px;
-  background: var(--primary);
-  margin: 20px auto;
-  border-radius: 10px;
 }
 
 .about-content {
   max-width: 700px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .about-content p {
@@ -193,23 +152,105 @@ body {
   font-size: 1.1rem;
 }
 
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.skill-tag {
+  background: var(--primary);
+  color: var(--text-main);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+
+.projects-section {
+  padding: 100px 20px;
+  background: var(--white);
+  text-align: center;
+}
+
+.projects-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.project-card {
+  width: 90%;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 40px;
+  background: var(--white);
+  box-shadow: var(--shadow-soft);
+  border-radius: 8px;
+  text-align: left;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.project-card:hover { transform: translateY(-4px); }
+
+.project-card.featured {
+  border-top: 4px solid var(--primary);
+}
+
+.project-badge {
+  display: inline-block;
+  background: var(--primary);
+  color: var(--text-main);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.project-card h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.project-card p {
+  color: var(--text-sub);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.project-tags span {
+  background: #f0f0f0;
+  color: #333;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 .contact-section {
   padding: 100px 20px;
   background: var(--bg-body);
   text-align: center;
-}
-
-.contact-section .section-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-}
-
-.contact-section .yellow-line {
-  width: 35px;
-  height: 5px;
-  background: var(--primary);
-  margin: 20px auto;
-  border-radius: 10px;
 }
 
 .contact-text {
@@ -218,48 +259,6 @@ body {
   line-height: 1.6;
   color: var(--text-sub);
   font-size: 1.1rem;
-}
-
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 15px 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-  resize: none;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 5px rgba(250, 207, 15, 0.5);
-}
-
-.contact-form button {
-  width: max-content;
-  align-self: center;
-}
-
-.form-response {
-  font-weight: 600;
-  color: var(--text-main);
-  text-align: center;
-}
-
-.contact-section {
-  padding: 100px 20px;
-  background: var(--bg-white);
-  text-align: center;
-  min-height: 50vh;
 }
 
 .social-footer-container {
@@ -275,23 +274,21 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.3s ease;
+  animation: float 3s ease-in-out infinite;
+  transition: transform 0.3s;
 }
 
 .social-item img {
-  width: 40px; /* Slightly larger for footer view */
-  height: 40px;
+  width: 40px; height: 40px;
   margin-bottom: 10px;
   filter: grayscale(1);
+  transition: filter 0.3s;
 }
 
-.social-item:hover {
-  transform: translateY(-5px);
-}
-
-.social-item:hover img {
-  filter: grayscale(0);
-}
+.social-item:hover img { filter: grayscale(0); }
+.social-item:hover { animation-play-state: paused; transform: scale(1.1); }
+.social-item:nth-child(2) { animation-delay: 0.5s; }
+.social-item:nth-child(3) { animation-delay: 1s; }
 
 .social-item span {
   font-size: 0.8rem;
@@ -300,95 +297,97 @@ body {
   text-transform: uppercase;
 }
 
-.social-icon img {
-  width: 25px;
-  height: 25px;
-  margin: 10px 0;
-  display: block;
-  filter: grayscale(1);
-  transition: var(--transition-fast, 0.3s);
+
+.main-footer {
+  background: #111;
+  color: #fff;
+  padding: 60px 40px 30px;
 }
 
-.social-icon img:hover {
-  filter: grayscale(0); /* Colors come back on hover! */
-  transform: scale(1.1);
-  transition: var(--transition-fast, 0.3s);
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
+
+.footer-logo {
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--primary);
+}
+
+.footer-tagline {
+  color: #999;
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
+
+.footer-links,
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a,
+.footer-social a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover,
+.footer-social a:hover { color: var(--primary); }
+
+.footer-bottom {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-bottom p {
+  font-size: 0.8rem;
+  color: #666;
+  letter-spacing: 1px;
+}
+
 .hamburger {
-  display: none; /* hidden on desktop */
+  display: none;
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
 }
 
 .hamburger span {
-  width: 25px;
-  height: 3px;
+  width: 25px; height: 3px;
   background: var(--text-main);
   border-radius: 2px;
 }
-.main-footer {
-  background: #000;
-  color: #fff;
-  padding: 40px 0;
-  text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
 
-.footer-container p {
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  font-weight: 400;
-}
-
-.footer-name {
-  font-weight: 700;
-  color: var(--primary-yellow); /* Uses your existing yellow variable */
-}
-
-/* 1. Define the "Floating" movement */
+/* ── Animations ─────────────────────── */
 @keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  } /* Moves up 10px */
-  100% {
-    transform: translateY(0px);
-  }
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
 
-.social-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-
-  animation: float 3s ease-in-out infinite;
-}
-
-/* 3. Add "Delay" so they don't move all at the same time (optional but pro) */
-.social-item:nth-child(2) {
-  animation-delay: 0.5s;
-}
-
-.social-item:nth-child(3) {
-  animation-delay: 1s;
-}
-
-.social-item:hover {
-  animation-play-state: paused;
-  transform: scale(1.2); /* Slight zoom on hover */
-}
-
+/* ── Mobile ─────────────────────────── */
 @media (max-width: 768px) {
+  .navbar { padding: 15px 20px; }
+
   .nav-links {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
+    top: 100%; left: 0; right: 0;
     background: var(--white);
     flex-direction: column;
     text-align: center;
@@ -397,20 +396,14 @@ body {
     z-index: 1001;
   }
 
-  .nav-links a {
-    margin: 15px 0;
-    display: block;
-  }
+  .nav-links a { margin: 15px 0; display: block; }
+  .hamburger { display: flex; }
+  .nav-links.active { display: flex; }
 
-  .hamburger {
-    display: flex;
-  }
+  .footer-top { flex-direction: column; align-items: center; text-align: center; }
+  .footer-links, .footer-social { align-items: center; }
 
-  .nav-links.active {
-    display: flex;
-  }
-
-  .social-side-bar {
-    display: none;
-  }
+  .project-card { padding: 24px; }
+  .project-buttons { flex-direction: column; }
+  .hero-buttons { flex-direction: column; align-items: center; }
 }
