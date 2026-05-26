@@ -22,7 +22,7 @@ body { font-family: "Montserrat", sans-serif; background-color: var(--bg-body); 
   top: 0; left: 0;
   width: 100%;
   z-index: 1000;
-  padding: 15px 50px;
+  padding: 5px 10px;
   background: var(--white);
   box-shadow: var(--shadow-soft);
 }
@@ -51,8 +51,8 @@ body { font-family: "Montserrat", sans-serif; background-color: var(--bg-body); 
   text-decoration: none;
   color: var(--text-main);
   font-weight: 700;
-  margin-left: 40px;
-  font-size: 0.9rem;
+  margin-left: 30px;
+  font-size: 0.85rem;
   transition: color 0.2s;
 }
 
@@ -122,8 +122,6 @@ body { font-family: "Montserrat", sans-serif; background-color: var(--bg-body); 
   background: var(--text-main);
   color: var(--white);
 }
-
-
 .section-title { font-size: 2.5rem; font-weight: 800; }
 
 .yellow-line {
@@ -169,7 +167,6 @@ body { font-family: "Montserrat", sans-serif; background-color: var(--bg-body); 
   font-weight: 700;
 }
 
-
 .projects-section {
   padding: 100px 20px;
   background: var(--white);
@@ -196,9 +193,7 @@ body { font-family: "Montserrat", sans-serif; background-color: var(--bg-body); 
 
 .project-card:hover { transform: translateY(-4px); }
 
-.project-card.featured {
-  border-top: 4px solid var(--primary);
-}
+.project-card.featured { border-top: 4px solid var(--primary); }
 
 .project-badge {
   display: inline-block;
@@ -247,9 +242,64 @@ body { font-family: "Montserrat", sans-serif; background-color: var(--bg-body); 
   flex-wrap: wrap;
 }
 
-.contact-section {
+.hobbies-section {
   padding: 100px 20px;
   background: var(--bg-body);
+  text-align: center;
+}
+
+.hobbies-intro {
+  max-width: 600px;
+  margin: 0 auto 50px;
+  color: var(--text-sub);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hobby-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 32px 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid #f0f0f0;
+}
+
+.hobby-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-soft);
+}
+
+.hobby-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.hobby-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text-main);
+}
+
+.hobby-card p {
+  font-size: 0.9rem;
+  color: var(--text-sub);
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+.contact-section {
+  padding: 100px 20px;
+  background: var(--white);
   text-align: center;
 }
 
@@ -360,6 +410,7 @@ body { font-family: "Montserrat", sans-serif; background-color: var(--bg-body); 
   letter-spacing: 1px;
 }
 
+/* ── Hamburger ──────────────────────── */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -373,14 +424,13 @@ body { font-family: "Montserrat", sans-serif; background-color: var(--bg-body); 
   border-radius: 2px;
 }
 
-/* ── Animations ─────────────────────── */
+
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
   100% { transform: translateY(0px); }
 }
 
-/* ── Mobile ─────────────────────────── */
 @media (max-width: 768px) {
   .navbar { padding: 15px 20px; }
 
@@ -396,14 +446,24 @@ body { font-family: "Montserrat", sans-serif; background-color: var(--bg-body); 
     z-index: 1001;
   }
 
-  .nav-links a { margin: 15px 0; display: block; }
+  .nav-links a { margin: 12px 0; display: block; }
   .hamburger { display: flex; }
   .nav-links.active { display: flex; }
 
-  .footer-top { flex-direction: column; align-items: center; text-align: center; }
-  .footer-links, .footer-social { align-items: center; }
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links,
+  .footer-social { align-items: center; }
 
   .project-card { padding: 24px; }
   .project-buttons { flex-direction: column; }
   .hero-buttons { flex-direction: column; align-items: center; }
+
+  .hobbies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
